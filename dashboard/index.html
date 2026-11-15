@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch Radar — priced by a fitted law, audited leave-one-out</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark">LR</div>
+    <div>
+      <h1>Launch Radar</h1>
+      <p class="sub" id="subline">Pre-token protocols ranked by what their launch would be worth.</p>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-view="board" class="on">Board</button>
+    <button data-view="comparables">Comparables</button>
+    <button data-view="method">Method</button>
+  </nav>
+</header>
+
+<section id="strip" class="strip"></section>
+
+<section id="filters" class="filters">
+  <input id="q" type="search" placeholder="Search name, slug or category">
+  <select id="fcat"><option value="">All categories</option></select>
+  <select id="fchain"><option value="">All chains</option></select>
+  <select id="fconf"><option value="">Any confidence</option><option value="A">Confidence A</option><option value="B">Confidence B or better</option><option value="C">Confidence C only</option></select>
+  <label class="check"><input id="fwatch" type="checkbox"> Watchlist only</label>
+  <span id="rowcount" class="dim"></span>
+</section>
+
+<main>
+  <section id="view-board"></section>
+  <section id="view-comparables" hidden></section>
+  <section id="view-method" hidden></section>
+  <section id="view-detail" hidden></section>
+</main>
+
+<footer class="foot" id="foot"></footer>
+
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
